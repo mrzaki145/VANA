@@ -1,0 +1,33 @@
+.section {
+  padding-block: 5rem 3rem;
+
+  &__header {
+    text-align: center;
+    margin-block-end: 3.75rem;
+  }
+
+  &__title {
+    font-size: 2.125rem;
+    margin-inline: auto;
+    letter-spacing: -0.05rem;
+    @media (min-width: 30em) {
+      font-size: 2.25rem;
+    }
+    @media (min-width: 48em) {
+      font-size: 2.825rem;
+    }
+    @media (min-width: 62em) {
+      font-size: 3;
+    }
+    @media (min-width: 75em) {
+      font-size: 3.75rem;
+    }
+  }
+}
+
+@import '1_features';
+@import '2_howitworks';
+@import '3_cookies';
+@import '4_control';
+@import '5_faq';
+@import '6_cta';

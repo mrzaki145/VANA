@@ -1,0 +1,139 @@
+@import 'fonts';
+@import 'props';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+html {
+  font-size: 100%;
+  font-synthesis: none;
+  text-rendering: optimizelegibility;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: Modernera, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #4b515a;
+  background-color: #fff;
+}
+
+// ::selection {
+//   color: #fff;
+//   background: #000;
+// }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+  line-height: 1;
+  font-weight: 700;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+#wrapper {
+  isolation: isolate;
+}
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (min-width: 48em) {
+    padding-inline: 1rem;
+    width: min(100% - 2rem, 80rem);
+  }
+
+  &--boxed {
+    @media (min-width: 48em) {
+      border-radius: var(--radius-md);
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  height: 100vh;
+  background-color: var(--clr-brand);
+  transform-origin: bottom;
+}
+
+.btn {
+  display: inline-block;
+  appearance: none;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.825rem 1.5rem;
+  color: #fff;
+  background-color: var(--clr-blue);
+  border: 1px solid var(--clr-blue);
+  border-radius: var(--radius-sm);
+  transition: var(--anim-du) var(--anim-tf);
+  transition-property: color, background-color, border-color;
+  cursor: pointer;
+  @media (min-width: 62em) {
+    font-size: 1.125rem;
+  }
+
+  &:hover {
+    color: var(--clr-blue);
+    background-color: #fff;
+    border-color: var(--clr-blue);
+  }
+}
+
+// Components
+@import 'components/form';
+
+// blocks
+@import 'blocks/nav';
+@import 'blocks/hero';
+@import 'blocks/sections/index';
+@import 'blocks/footer';

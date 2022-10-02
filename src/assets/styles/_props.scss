@@ -1,0 +1,18 @@
+:root {
+  /* colors */
+  --clr-brand: hsl(68, 100%, 50%);
+  --clr-peach: hsl(36, 97%, 85%);
+  --clr-purple: hsl(285, 100%, 87%);
+  --clr-orange: hsl(15, 100%, 62%);
+  --clr-blue: hsl(212, 100%, 50%);
+  --clr-gray: hsl(0, 5%, 96%);
+
+  /* border-radius */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-round: 100vmax;
+
+  /* animation */
+  --anim-du: 300ms;
+  --anim-tf: cubic-bezier(0.77, 0, 0.175, 1);
+}

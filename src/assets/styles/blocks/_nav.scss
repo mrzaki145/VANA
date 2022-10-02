@@ -1,0 +1,135 @@
+.nav {
+  position: fixed;
+  inset: 0.8rem;
+  bottom: auto !important;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  @media (min-width: 62em) {
+    inset: 1.5rem 0;
+  }
+
+  &--pinned {
+    transform: none;
+  }
+  &--unpinned {
+    transform: translateY(-130%);
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5625rem;
+    background-color: var(--clr-brand);
+    border-radius: var(--radius-sm);
+    @media (min-width: 62em) {
+      padding: 0.825rem;
+      padding-inline-start: 2rem;
+      border-radius: var(--radius-md);
+    }
+  }
+
+  &__logo {
+    width: 80px;
+    @media (min-width: 90em) {
+      width: 95px;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    list-style-type: none;
+
+    @media (min-width: 62em) {
+      opacity: 1 !important;
+      display: flex !important;
+      align-items: center;
+      height: auto !important;
+      width: auto !important;
+      overflow: visible !important;
+      visibility: visible !important;
+      margin: 0 !important;
+      pointer-events: all !important;
+    }
+
+    &[data-state='collapsed'] {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    &[data-state='expanded'] {
+      overflow: visible;
+      pointer-events: all;
+    }
+  }
+
+  &__list-item:not(:last-child) {
+    border-block-end: 1px solid #000;
+    padding-block-end: 1rem;
+    margin-block-end: 1rem;
+    @media (min-width: 62em) {
+      border: none;
+      padding: 0;
+      margin: 0;
+      margin-right: 1.5rem !important;
+    }
+  }
+
+  &__link {
+    color: #000;
+    font-size: 1.6rem;
+    line-height: 1;
+    font-weight: bold;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    @media (min-width: 62em) {
+      font-size: 1.125rem;
+    }
+
+    &:hover,
+    &:focus-visible {
+      opacity: 0.65;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    padding-block: 0.75rem;
+  }
+}
+
+.toggler {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 34px;
+  height: 20px;
+  border: none;
+  outline: none;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+  @media (min-width: 62em) {
+    display: none;
+    pointer-events: none;
+  }
+
+  &[aria-expanded='true'] {
+    .line:nth-child(2) {
+      width: 70%;
+    }
+    .line:nth-child(3) {
+      width: 40%;
+    }
+  }
+
+  .line {
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 100vmax;
+    transition: width 0.3s ease-out;
+  }
+}

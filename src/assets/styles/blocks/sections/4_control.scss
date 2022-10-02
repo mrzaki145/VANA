@@ -1,0 +1,46 @@
+.take-control {
+  .section {
+    &__subtitle {
+      max-width: 60ch;
+      margin-inline: auto;
+      margin-block-start: 1.5rem;
+    }
+
+    &__content {
+      display: grid;
+      gap: 3rem;
+      justify-content: center;
+
+      @media (min-width: 62em) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  .icn {
+    margin-block-end: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    @media (min-width: 48em) {
+      font-size: 1rem;
+    }
+    @media (min-width: 62em) {
+      font-size: 1.25rem;
+    }
+  }
+
+  p {
+    max-width: 45ch;
+    margin-block-start: 0.75rem;
+  }
+
+  a {
+    color: var(--clr-blue);
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    margin-block-start: 1rem;
+  }
+}

@@ -1,0 +1,141 @@
+.footer {
+  background-color: var(--clr-gray);
+
+  .container {
+    @media (min-width: 62em) {
+      padding-inline: 2rem;
+    }
+  }
+
+  &__top {
+    position: relative;
+    display: grid;
+    gap: 2.5rem;
+    padding-block: 2rem 30vw;
+    background-color: var(--clr-brand);
+    // overflow: hidden;
+    @media (min-width: 48em) {
+      grid-template-columns: repeat(2, 1fr);
+      padding-block-end: 24vw;
+    }
+    @media (min-width: 62em) {
+      gap: 3rem;
+      justify-content: space-between;
+      grid-template-columns: max-content auto auto;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 25vw;
+      // max-height: 300px;
+      background-image: url('/images/logo-footer.svg');
+      background-size: 90% auto;
+      background-position: center top;
+      background-repeat: no-repeat;
+      // outline: 1px solid red;
+      @media (min-width: 48em) {
+        height: 17vw;
+      }
+    }
+
+    header {
+      @media (min-width: 62em) {
+        max-width: 33ch;
+
+        h4 {
+          font-weight: 400;
+        }
+      }
+    }
+
+    nav {
+      dl {
+        display: grid;
+        gap: 5rem;
+        grid-template-columns: repeat(2, auto);
+        justify-items: start;
+        justify-content: start;
+        @media (min-width: 62em) {
+          gap: 3rem;
+        }
+      }
+      dt {
+        font-size: 1rem;
+        font-family: Gtalpina, sans-serif;
+        margin-bottom: 0.75rem;
+      }
+      dd + dd {
+        margin-block-start: 0.5rem;
+      }
+    }
+
+    section {
+      .form {
+        margin-inline: 0;
+        margin-block-end: 1.25rem;
+
+        &__input {
+          color: #000;
+          background-color: transparent;
+          border: 1px solid #000;
+        }
+        &__btn {
+          justify-self: start;
+        }
+      }
+
+      h4 {
+        @media (min-width: 62em) {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    @media (min-width: 62em) {
+      font-size: 1rem;
+    }
+  }
+
+  h4 {
+    max-width: 32ch;
+    margin-block-end: 1rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    @media (min-width: 30em) {
+      font-size: 1.125rem;
+    }
+    @media (min-width: 60em) {
+      max-width: 35ch;
+    }
+  }
+
+  small {
+    display: inline-block;
+    max-width: 40ch;
+    font-family: Modernera, sans-serif;
+    font-size: 0.75rem;
+    @media (min-width: 60em) {
+      max-width: 50ch;
+    }
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
